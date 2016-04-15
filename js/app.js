@@ -13,16 +13,16 @@ $(function(){
 
     // call search function and pass the search term as a parameter
     search(searchTerm);
-    $("#results-table").html("");
+    $("#daresults").html("");
     $("#search-term").val("");
   });
 
   function displayResults(results){
 
-  	var first = results.data[0];
+  	var rand = results.data[Math.floor(Math.random()*(results.data).length)];
 
-    $("#results-table tbody")
-      .append("<div><img src='" + first.images.fixed_height.url +"'/></div>");
+    $("#daresults")
+      .append("<div><img src='" + rand.images.fixed_height.url +"'/></div>");
 
 
     // use jquery to create a new table row containing data received from the API
