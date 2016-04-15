@@ -1,0 +1,65 @@
+.clearfix {
+  overflow: auto;
+  width: 100%;
+}
+
+/*Navigation*/
+nav {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+nav li {
+	width: 10%;
+	height: 30px;
+	float: left;
+	margin: 10px;
+}
+
+/*Responsive Nav*/
+
+nav li.responsive-nav {
+	float: right;
+	display: none;
+}
+
+/*Body*/
+
+body {
+	background-color: #aeb0b8;
+}
+
+/*Container*/
+
+.Container {
+	justify-content: center;
+	margin: 20px;
+}
+
+.Container form {
+	float: center;
+	padding: 70px 30%;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width:768px) {
+	/*Navigation*/
+	nav li {
+		display: none;
+	}
+
+	/* display the responsive nav using "display:block" */
+	nav li.responsive-nav {
+		display: block;
+		width: 30%;
+	}
+
+}

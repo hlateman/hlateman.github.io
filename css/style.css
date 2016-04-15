@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+
+/*
+html*/
+
+html {
+	height: 100%;
+	background-size: cover;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMSAxIDYgNCI+ICA8aW1hZ2UgZmlsdGVyPSJ1cmwoI2IpIiB3aWR0aD0iOCIgaGVpZ2h0PSI2IiB4bGluazpocmVmPSJkYXRhOmltYWdlL2pwZWc7YmFzZTY0LC85ai80QUFRU2taSlJnQUJBUUFBQVFBQkFBRC8yd0JEQUFJQkFRRUJBUUlCQVFFQ0FnSUNBZ1FEQWdJQ0FnVUVCQU1FQmdVR0JnWUZCZ1lHQndrSUJnY0pCd1lHQ0FzSUNRb0tDZ29LQmdnTERBc0tEQWtLQ2dyLzJ3QkRBUUlDQWdJQ0FnVURBd1VLQndZSENnb0tDZ29LQ2dvS0Nnb0tDZ29LQ2dvS0Nnb0tDZ29LQ2dvS0Nnb0tDZ29LQ2dvS0Nnb0tDZ29LQ2dvS0Nnb0tDZ3Ivd2dBUkNBQUdBQWdEQVJFQUFoRUJBeEVCLzhRQUZBQUJBQUFBQUFBQUFBQUFBQUFBQUFBQUNQL0VBQlVCQVFFQUFBQUFBQUFBQUFBQUFBQUFBQVFILzlvQURBTUJBQUlRQXhBQUFBQmlEc3YveEFBZkVBQUJBd01GQUFBQUFBQUFBQUFBQUFBQ0FRTUZBQVFSQndrU0pHSC8yZ0FJQVFFQUFUOEFpZHBiUjZIWUdhdnBRSER0YlVpZjZLRTY1eEZWSExwTGt2Vld2Ly9FQUIwUkFBRUVBZ01BQUFBQUFBQUFBQUFBQUFFQ0F4RWhBQVVISWxILzJnQUlBUUlCQVQ4QWY1bzNicEtFcGlUWGFoN1F6Ly9FQUI4UkFBSUFCZ01CQUFBQUFBQUFBQUFBQUFFQ0JBVVJFeUV4QUFZeVFmL2FBQWdCQXdFQlB3QVEzUW9hWEdHV1VvelVwZFltNlJuMHcyMmQvZWYvMlE9PSIvPiAgPGZpbHRlciBpZD0iYiI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iLjUiIC8+PC9maWx0ZXI+PC9zdmc+);
+}
+
+/*Navigation*/
+
+nav {
+
+}
+
+.flex {
+	padding: 25px 0px;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin: 0;
+	box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+/*Body*/
+
+body {
+	font-family: 'Roboto', 'sans-serif';
+	margin: 0;
+	background: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px) 0 -1px,
+	linear-gradient(, rgba(255, 255, 255, 0.1) 2px, transparent 2px) -1px 0;
+	background-color: transparent;
+	background-size:10px 10px, 10px 10px, 5px 5px, 5px 5px;
+}
+
+/*Table background*/
+
+.myTable {
+	width: 100%;
+  	text-align: center;
+  	font-weight: 300;
+  	color: white;
+  	display: flex;
+  	justify-content: space-around;
+}
+
+
+/*new div table background*/
+
+/*.myTable {
+	width: 100%;
+}
+
+.myTable ul {
+	float: left;
+}*/
+
+/*SearchBox*/
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.box {
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	width: 50%;
+	padding: 40px 80px;
+}
+
+.box h1, h3 {
+	text-align: center;
+	font-weight: 700;
+}
+
+input[type=text] {
+	padding: 8px 10px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+input[type=form] {
+	padding: 5px;
+}
+
+input[type=submit] {
+	padding: 8px 40px;
+	background-color: orange;
+	border: 0;
+	color: white;
+}
+
+#search-term {
+  width: 400px;
+}
+
+
+
+
+
