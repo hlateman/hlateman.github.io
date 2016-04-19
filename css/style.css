@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Fauna+One);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900);
 
 /*
 html*/
@@ -23,12 +24,14 @@ nav {
 	flex-direction: row;
 	margin: 0;
 	box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
+	font-family: 'Playfair Display', 'serif';
+	font-weight: 700;
 }
 
 /*Body*/
 
 body {
-	font-family: 'Roboto', 'sans-serif';
+	font-family: 'Fauna One', 'serif';
 	margin: 0;
 	background: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px) 0 -1px,
 	linear-gradient(, rgba(255, 255, 255, 0.1) 2px, transparent 2px) -1px 0;
@@ -41,7 +44,6 @@ body {
 .myTable {
 	width: 100%;
   	text-align: center;
-  	font-weight: 300;
   	color: white;
   	display: flex;
   	justify-content: space-around;
@@ -72,9 +74,14 @@ body {
 	padding: 40px 80px;
 }
 
-.box h1, h3 {
+.box h1 {
 	text-align: center;
-	font-weight: 700;
+	font-family: 'Playfair Display', 'serif';
+	font-weight: 900;
+}
+
+.box h3 {
+	text-align: center;
 }
 
 input[type=text] {
@@ -97,12 +104,21 @@ input[type=submit] {
 #search-term {
   width: 400px;
 }
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+#resultsflex {
+	display: flex;
+	justify-content: center;
+}
 
 #daresults {
 	height: 200px;
 	width: 50%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	background-color: white;
+	margin: 50px 0px;
 }
 
 

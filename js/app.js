@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    
-// get the td's in the table to repeat to fill the background
+
+  $('#daresults').hide();
+
+  $('.marquee').marquee();
 
 $(function(){
 
@@ -14,26 +16,24 @@ $(function(){
     // call search function and pass the search term as a parameter
     search(searchTerm);
     $("#daresults").html("");
-    $("#search-term").val("");
+
   });
 
   function displayResults(results){
 
-  	var rand = results.data[Math.floor(Math.random()*(results.data).length)];
+  	var rand = results.data[Math.floor(Math.random()*(results.data).length)],
+        textResults = displayotherResults(), 
+        lengthResults = returnLengthtext(),
+        message = (lengthResults) ? lengthResults:textResults;
+
+    console.log('rand here: ',rand)
 
     $("#daresults")
-      .append("<div><img src='" + rand.images.fixed_height.url +"'/></div>");
+      .html("<div><img src='" + rand.images.fixed_height.url +"'/>"+message+"</div>");
 
 
-    // use jquery to create a new table row containing data received from the API
-    // $.each(results.data, function(index, gif){
-    //   $("#results-table tbody")
-    //   .append("<tr>" +
-    //           "<td>" + gif.rating + "</td>" +
-    //           "<td><img src='" + gif.images.fixed_height.url +"'/></td>" +
-    //           "</tr>");
 
-    // });
+
   }
 
   function search(term){
@@ -43,35 +43,76 @@ $(function(){
 
     // Makes an API request to the itunes server with a request for data using the search term
     // This uses jQuery's .ajax function
+    $('#daresults').hide();
     $.ajax({
       url: url,
       type: "GET",
       data: {q: term, api_key: apiKey },
       success: function(data){
-        console.log(data);
+        console.log('data here: ',data);
         displayResults(data);
+        $('#daresults').show();
+
+        $("#search-term").val("");
       }
     });
+
+
+
+
   }
+  function displayotherResults(){
+
+      var str = $("#search-term").val();
+      var res = str.split("");
+
+      console.log(res.length, ' length there');
+
+      var returnResults = {
+        'b':'This word is weird.',
+        'c':'not weird',
+        'd':'this starts with a D',
+        'x': 'this start with xx'
+      }
+
+
+      if(typeof returnResults[res[0]] === 'string'){
+        return returnResults[res[0]]
+      }else{
+        return "This word is so weird we don't even recognise it."
+      }
+
+
+
+      // if (res[0] == 'b') { return ""}
+      // else if (res[0] == 'c') { return "not weird"}
+      // else if (res[0] == 'd') { return "this starts with a D"}
+      // else if (res.length == 5) { return "x"}
+      // else { return ("This word is so weird we don't even recognise it.")}
+
+    }
+
+      function returnLengthtext(){
+
+      var str = $("#search-term").val();
+      var res = str.split("");
+
+      console.log(res.length, ' length there');
+
+      var returnResults = {
+        8 :'This word is very weird.',
+        5 :'This word is kinda weird.',
+        3 :'This word is not weird at all.',
+      }
+
+      if(typeof returnResults[res.length] == 'b'){
+        return returnResults[res.length]
+      }else{
+        return false
+      }
+
+    }
 });
-
-// when user enters word
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });
