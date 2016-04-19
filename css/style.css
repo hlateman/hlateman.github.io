@@ -65,6 +65,7 @@ body {
 .container {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .box {
@@ -72,6 +73,7 @@ body {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	width: 50%;
 	padding: 40px 80px;
+	margin: 50px 0px;
 }
 
 .box h1 {
@@ -118,7 +120,6 @@ input[type=submit] {
 	width: 50%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	background-color: white;
-	margin: 50px 0px;
 }
 
 

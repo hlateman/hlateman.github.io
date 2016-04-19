@@ -71,8 +71,8 @@ $(function(){
       var returnResults = {
         'b':'This word is weird.',
         'c':'not weird',
-        'd':'this starts with a D',
-        'x': 'this start with xx'
+        'd':'This word is kind of weird.',
+        'x': 'This word is not weird, but the person who entered it is.'
       }
 
 
