@@ -109,6 +109,8 @@ input[type=submit] {
 .marquee {
   width: 100%;
   overflow: hidden;
+  font-family: 'Fauna One', serif;
+  color: purple;
 }
 #resultsflex {
 	display: flex;
@@ -117,9 +119,13 @@ input[type=submit] {
 
 #daresults {
 	height: 200px;
-	width: 50%;
+	width: 63%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	background-color: white;
+}
+
+.test {
+	padding: 10px;
 }
 
 

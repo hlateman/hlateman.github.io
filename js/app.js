@@ -29,7 +29,7 @@ $(function(){
     console.log('rand here: ',rand)
 
     $("#daresults")
-      .html("<div><img src='" + rand.images.fixed_height.url +"'/>"+message+"</div>");
+      .html("<div><img style='float:left;' src='" + rand.images.fixed_height.url +"'/><span class='test'>" + message + "</span></div>");
 
 
 
@@ -95,19 +95,24 @@ $(function(){
       function returnLengthtext(){
 
       var str = $("#search-term").val();
-      var res = str.split("");
+      var length = str.length;
+      // var res = str.split("");
 
-      console.log(res.length, ' length there');
+      console.log(length, ' length there');
 
       var returnResults = {
-        8 :'This word is very weird.',
-        5 :'This word is kinda weird.',
-        3 :'This word is not weird at all.',
+        long  :'This word is very weird.',
+        med   :'This word is kinda weird.',
+        short :'This word is not weird at all.',
       }
 
-      if(typeof returnResults[res.length] == 'b'){
-        return returnResults[res.length]
-      }else{
+      if(length === 3) {
+        return returnResults.short;
+      } else if(length === 5) {
+        return returnResults.med; 
+      } else if (length === 8) {
+        return returnResults.long; 
+      } else{
         return false
       }
 
